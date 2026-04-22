@@ -1,0 +1,97 @@
+/* 
+========================================
+PRÁCTICA 1: BOTONES INTERACTIVOS CON CSS
+========================================
+Objetivo: Implementar botones con diferentes estados y efectos hover
+Técnicas: Variables CSS, pseudo-clases, diseño responsive
+Autor: Estudiante de Fundamentos de Diseño Web
+*/
+
+/* VARIABLES CSS - Sistema de diseño consistente */
+:root {
+    /* Paleta de colores */
+    --color-primary: #007bff;    /* Azul para acciones principales */
+    --color-success: #28a745;    /* Verde para acciones confirmativas */
+    --color-danger: #dc3545;     /* Rojo para acciones destructivas */
+    --color-white: #ffffff;      /* Blanco para texto sobre fondos oscuros */
+    --color-black: #000000;      /* Negro para texto sobre fondos claros */
+    
+    /* Sistema de espaciado */
+    --spacing-sm: 10px;          /* Espaciado pequeño */
+    --spacing-md: 20px;          /* Espaciado mediano */
+    
+    /* Estilos base */
+    --border-radius: 5px;        /* Bordes redondeados */
+    --font-size: 14px;           /* Tamaño de fuente base */
+    --transition: 0.3s ease;     /* Transiciones suaves */
+}
+
+/* BOTÓN BASE */
+.btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+    border: 2px solid transparent; /* IMPORTANTE */
+}
+
+/* GUARDAR (AZUL) */
+.btn-primary {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--color-black);
+    border-color: var(--color-primary);
+}
+
+/* ACEPTAR (VERDE) */
+.btn-success {
+    background: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.btn-success:hover {
+    background: transparent;
+    color: var(--color-black);
+    border-color: var(--color-success);
+}
+
+/* ELIMINAR (ROJO) */
+.btn-danger {
+    background: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.btn-danger:hover {
+    background: transparent;
+    color: var(--color-black);
+    border-color: var(--color-danger);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+        margin: 5px;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .btn {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+}
