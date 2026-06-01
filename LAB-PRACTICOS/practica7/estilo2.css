@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, helvetica, sans-serif;
+}
+
+
+
+body {
+    background: #1e1e1e;
+   
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    background: white;
+}
+
+.card:hover .img {
+    width: 110%;
+    height: 110%;
+    background-color: plum;
+    top: -13%;
+    left: -75%;
+}
+
+.card .img {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.card .img::after {
+    position: absolute;
+    content: attr(data-text);
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.1) ;
+    font-weight: bold;
+}
+
+
+.card .img img {
+    width: 100%;
+   
+}
+
+.card .content {
+    width: 78%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.card .content h3 {
+  
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+
+.card .content a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #3e3e3e;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 1006px) {
+    .container {
+        justify-content: center;
+    }
+    .card {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 578px) {
+    .card {
+        position: relative;
+        height: auto;
+    }
+    .card .img, .card:hover .img {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        top: 0;
+        left: 0;
+    }
+    .card .img img {
+        width: 80%;
+    }
+    .card .content {
+        position: relative;
+        padding: 10px;
+    }
+}

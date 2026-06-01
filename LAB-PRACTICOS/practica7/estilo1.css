@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #7449fe;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-bar {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    min-height: 70px;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.inicio, .servicios, .productos, .contacto {
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 5px;
+    border: 1px solid #000;
+}
